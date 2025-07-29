@@ -1,9 +1,38 @@
+// import React from "react";
+// import Home from "./components/Home";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import About from "./pages/about/About";
+// import Contact from "./pages/contact/Contact";
+// import Service from "./pages/Services/service";
+
+// const App = () => {
+//   return (
+//     <>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/contact" element={<Contact />} />
+//           <Route path="/service" element={<Service />} />
+//           <Route path="*" element={<h1>Page Not Found</h1>} />
+//         </Routes>
+//       </BrowserRouter>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+
 import React from "react";
 import Home from "./components/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Service from "./pages/Services/service";
+import GetApp from "./components/GetApp"; 
 
 const App = () => {
   return (
@@ -14,6 +43,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/get-app" element={<GetApp />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
@@ -22,3 +52,4 @@ const App = () => {
 };
 
 export default App;
+

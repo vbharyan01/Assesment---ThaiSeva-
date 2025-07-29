@@ -35,43 +35,47 @@ const Preview = () => {
 
   return (
     <>
-      {/* HEADER */}
-      <div className="flex-col text-center items-center mt-24">
-        <p className="md:text-4xl text-3xl font-semibold">
-          <span className="relative">
-            <span className="text-yellow-500">App</span> PREVIEW
-            <i className="bi bi-dot text-yellow-500 text-5xl absolute left-14 bottom-2" />
-          </span>
-        </p>
-        <div className="flex justify-center">
-          <p className="m-6 text-slate-600 lg:w-[39%] md:w-[55%] text-sm md:text-base">
-            Improving your small business's growth through THAISEVA app. It also helps improve your customer service and performance.
-          </p>
-        </div>
-      </div>
+{/* HEADER */}
+<div className="flex flex-col text-center items-center mt-24 px-4">
+  <p className="text-3xl md:text-5xl font-extrabold tracking-tight relative inline-block text-gray-900">
+    <span className="relative z-10">
+      <span className="text-yellow-500">App</span> Preview
+    </span>
+    <i className="bi bi-dot text-yellow-500 text-5xl absolute -right-6 -bottom-2 z-0 animate-ping" />
+  </p>
+
+  <p className="mt-6 text-gray-700 text-sm md:text-lg max-w-2xl leading-relaxed">
+    🚀 <span className="text-black font-medium">Boost your small business</span> with the <span className="text-yellow-500 font-semibold">THAISEVA</span> app — enhancing customer service and streamlining performance like never before.
+  </p>
+</div>
+
 
       {/* CAROUSEL */}
-      <div className="flex justify-center mb-20 mt-10">
-        <div className="flex items-center justify-between bg-slate-100 p-4 rounded-xl w-full max-w-3xl">
-          <button
-            className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold"
-            onClick={goToPrev}
-          >
-            Prev
-          </button>
-          <img
-            src={images[activeIndex]}
-            className="h-[24rem] sm:h-[28rem] md:h-[30rem] object-contain rounded-xl"
-            alt="App screen"
-          />
-          <button
-            className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold"
-            onClick={goToNext}
-          >
-            Next
-          </button>
-        </div>
-      </div>
+<div className="flex justify-center mb-20 mt-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-between bg-slate-100 p-4 rounded-xl w-full max-w-5xl gap-4">
+    <button
+      className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold"
+      onClick={goToPrev}
+    >
+      Prev
+    </button>
+
+    <div className="w-full flex justify-center">
+      <img
+        src={images[activeIndex]}
+        alt="App preview"
+        className="w-full sm:w-[20rem] md:w-[24rem] lg:w-[28rem] max-h-[32rem] object-contain rounded-xl"
+      />
+    </div>
+
+    <button
+      className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold"
+      onClick={goToNext}
+    >
+      Next
+    </button>
+  </div>
+</div>
 
       {/* COUNTER SECTION */}
       <div className="previewBackImg group">

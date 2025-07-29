@@ -6,94 +6,82 @@ import googlePay from "../assets/Landing-Img/Home/google-pay.png";
 const Subscribe = () => {
   return (
     <>
-      <div className="previewBackImg pb-20">
-        <div className="flex-col text-center items-center  pt-24">
-          <p className="md:text-4xl text-3xl text-white font-semibold ">
+      {/* Newsletter Section */}
+      <div className="previewBackImg pb-20 px-4">
+        <div className="text-center pt-24">
+          <p className="md:text-4xl text-3xl text-white font-semibold">
             Subscribe to Our
-            <span className="text-yellow-500 "> Newsletter </span>
+            <span className="text-yellow-500"> Newsletter </span>
           </p>
-          <div className="text-center flex justify-center">
-            <p className="m-6 text-slate-300  lg:w-[30%] md:w-[55%]">
-              Improving your small business's growth through THAISEVA app. It
-              also{" "}
-            </p>
-          </div>
+          <p className="mt-4 text-slate-300 max-w-xl mx-auto">
+            Improving your small business's growth through the THAISEVA app.
+          </p>
         </div>
-        <div className="flex-col text-center items-center mt-14 ">
+
+        <div className="flex flex-col sm:flex-row items-center justify-center mt-10 gap-4 px-4">
           <input
-            type="text"
-            className="p-3 lg:w-[28rem] sm:w-[23rem] rounded-s-lg sm:text-lg bg-white "
-            placeholder="Enter your Email here"
+            type="email"
+            className="p-3 w-full max-w-md rounded-lg sm:rounded-s-lg sm:rounded-e-none text-black bg-white text-base sm:text-lg"
+            placeholder="Enter your email"
           />
-          <button className="bg-yellow-500 p-3 px-10 rounded-e-lg font-semibold sm:text-lg text-black">
+          <button className="bg-yellow-500 px-8 py-3 rounded-lg sm:rounded-e-lg sm:rounded-s-none font-semibold text-black text-base sm:text-lg">
             Subscribe
           </button>
         </div>
       </div>
 
-      <div className="flex-col text-center items-center  pt-20 pb-10 ">
-        <p className="md:text-4xl text-3xl font-semibold relative text-black">
-          <i className="bi text-yellow-500 bi-dot text-5xl absolute bottom-1 left-30 transform -translate-x-7 -translate-y-2"></i>
-          DOWNLOAD <span className="text-yellow-500 ">THAISEVA APP </span>
-          TODAY!
+      {/* App Download Section */}
+      <div className="text-center pt-20 pb-10 px-4 bg-white">
+        <p className="md:text-4xl text-3xl font-semibold relative text-black inline-block">
+          <i className="bi bi-dot text-yellow-500 text-5xl absolute -left-6 -top-3"></i>
+          DOWNLOAD <span className="text-yellow-500">THAISEVA APP</span> TODAY!
         </p>
-        <div className="text-center flex justify-center">
-          <p className="m-6 lg:w-[30%] md:w-[55%] text-black">
-            Improving your small business's growth through THAISEVA app. It also{" "}
-          </p>
-        </div>
+        <p className="mt-4 text-gray-700 max-w-xl mx-auto">
+          Improving your small business's growth through the THAISEVA app.
+        </p>
       </div>
-      <div className="sm:flex sm:space-x-10 mx-10 lg:gap-28 gap-10 justify-center mb-14">
-        <div className="">
-          <div className="bg-yellow-100 h-36 ms-[30%] sm:ms-6 w-36 p-4 rounded-lg">
-            <div className="h-42 w-36 bg-slate-900 rounded-lg  flex justify-center items-center">
-              <div className="text-center text-white py-4">
-                <img src={Logo} alt="" className="h-20 mb-3" />
-                <p className="text-2xl">THAISEVS</p>
-              </div>
+
+      {/* Store Cards */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16 px-6 pb-20">
+        {/* App Store */}
+        <div className="text-center">
+          <div className="bg-yellow-100 h-36 w-36 p-4 rounded-lg mx-auto">
+            <div className="h-full w-full bg-slate-900 rounded-lg flex flex-col justify-center items-center">
+              <img src={Logo} alt="Logo" className="h-20 mb-2" />
+              <p className="text-white text-lg font-semibold">THAISEVS</p>
             </div>
           </div>
-          <div className="mt-16    text-center">
-            <div className="ms-[25%] sm:ms-0">
-              <button>
-                <img src={AppStore} alt="" className="" />
-              </button>
-              <div className="text-yellow-500 sm:ms-0 ms-6 space-x-1 text-lg flex sm:justify-center my-4">
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <p className="text-black">(305)</p>
-              </div>
+
+          <div className="mt-6">
+            <img src={AppStore} alt="App Store" className="mx-auto h-12" />
+            <div className="flex justify-center items-center text-yellow-500 mt-4 gap-1">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} className="bi bi-star-fill"></i>
+              ))}
+              <p className="text-black text-sm ml-2">(305)</p>
             </div>
-            <p className="text-lg text-black">Rating 4.2</p>
+            <p className="text-black text-base mt-1">Rating 4.2</p>
           </div>
         </div>
-        <div className="mt-20 sm:mt-0">
-          <div className="bg-yellow-100 h-36 ms-[30%] sm:ms-6 w-36 p-4 rounded-lg">
-            <div className="h-42 w-36 bg-slate-900 rounded-lg  flex justify-center items-center">
-              <div className="text-center text-white py-4">
-                <img src={Logo} alt="" className="h-20 mb-3" />
-                <p className="text-2xl">THAISEVS</p>
-              </div>
+
+        {/* Google Play */}
+        <div className="text-center mt-10 sm:mt-0">
+          <div className="bg-yellow-100 h-36 w-36 p-4 rounded-lg mx-auto">
+            <div className="h-full w-full bg-slate-900 rounded-lg flex flex-col justify-center items-center">
+              <img src={Logo} alt="Logo" className="h-20 mb-2" />
+              <p className="text-white text-lg font-semibold">THAISEVS</p>
             </div>
           </div>
-          <div className="mt-16    text-center">
-            <div className="ms-[25%] sm:ms-0">
-              <button>
-                <img src={googlePay} alt="" className="" />
-              </button>
-              <div className="text-yellow-500 sm:ms-0 ms-6 space-x-1 text-lg flex sm:justify-center my-4">
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <i className="bi  bi-star-fill"></i>
-                <p className="text-black">(395)</p>
-              </div>
+
+          <div className="mt-6">
+            <img src={googlePay} alt="Google Play" className="mx-auto h-12" />
+            <div className="flex justify-center items-center text-yellow-500 mt-4 gap-1">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} className="bi bi-star-fill"></i>
+              ))}
+              <p className="text-black text-sm ml-2">(395)</p>
             </div>
-            <p className="text-lg text-black">Rating 4.8</p>
+            <p className="text-black text-base mt-1">Rating 4.8</p>
           </div>
         </div>
       </div>

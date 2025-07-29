@@ -1,61 +1,79 @@
-import React from 'react'
-import Img1 from "../assets/Landing-Img/Group-logo.png"
-import whatsapp from "../assets/Landing-Img/whatsapp-icon.png"
-import facebook from "../assets/Landing-Img/facebook.png"
-import instagram from "../assets/Landing-Img/instagram.png"
-import twitter from "../assets/Landing-Img/twitter.png"
-import AppStore from "../assets/Landing-Img/Home/app-store.png"
-import googlePay from "../assets/Landing-Img/Home/google-pay.png"
+import React from 'react';
+import Img1 from "../assets/Landing-Img/Group-logo.png";
+import whatsapp from "../assets/Landing-Img/whatsapp-icon.png";
+import facebook from "../assets/Landing-Img/facebook.png";
+import instagram from "../assets/Landing-Img/instagram.png";
+import twitter from "../assets/Landing-Img/twitter.png";
+import AppStore from "../assets/Landing-Img/Home/app-store.png";
+import googlePay from "../assets/Landing-Img/Home/google-pay.png";
 
 const Footer = () => {
-    return <>
-        <div className="previewBackImg">
-            <div className='grid grid-cols-12 text-white mx-12 pt-20 pb-10 gap-8'>
-                <div className='col-span-12  pb-10 md:col-span-4 lg:col-span-4 border-b md:border-b-0 '>
-                    <div className='flex items-center space-x-2'>
-                        <img src={Img1} height={50} width={50} alt="" />
-                        <span className='text-3xl font-semibold text-white'>Thai<span className='text-yellow-400'>seva</span></span>
-                    </div>
-                    <p className='text-xl mt-5'><i class="bi bi-envelope-at-fill"></i> taiseva@gmail.com</p>
-                    <p className='text-xl mt-2'><i class="bi bi-phone-fill"></i> +66 7209169866</p>
-                </div>
-
-                <div className='col-span-12  md:col-span-3 lg:col-span-2  border-b md:border-b-0 lg:border-b-0'>
-                    <p className='text-2xl font-semibold'>Company</p>
-                    <p className='text-lg mt-6 lg:mt-10 my-3'>About</p>
-                    <p className='text-lg my-3 '>Contact</p>
-                    <p className='text-lg my-3'>Services</p>
-                </div>
-
-                <div className='col-span-12  md:col-span-3 lg:col-span-3  border-b md:border-b-0 lg:border-b-0'>
-                    <p className='text-2xl font-semibold'>Contact</p>
-                    <p className='text-lg mt-6 lg:mt-10 my-3'>FAQs</p>
-                    <p className='text-lg my-3'>Help</p>
-                    <p className='text-lg my-3'>Terms & Conditions</p>
-
-                </div>
-
-                <div className='col-span-12  md:col-span-6 lg:col-span-3 '>
-                    <div className='flex gap-3 ms-2'>
-                        <img src={whatsapp} alt="" />
-                        <img src={facebook} alt="" />
-                        <img src={instagram} alt="" />
-                        <img src={twitter} alt="" />
-                    </div>
-                    <p className='my-1 text-lg mt-3 lg:mt-6 ms-12 font-semibold'>Let's try out!</p>
-                    <button>
-                        <img src={AppStore} alt="" className='my-4' />
-                    </button>
-                    <button>
-                        <img src={googlePay} alt="" />
-                    </button>
-                </div>
-            </div>
-            <div className='text-center  text-gray-500 border-t text-lg  p-5'>
-                Copyright © 2024 UX/UI Designer All Rights Reserved
-            </div>
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        
+        {/* Brand Info */}
+        <div>
+          <div className="flex items-center space-x-3 mb-4">
+            <img src={Img1} alt="Thaiseva Logo" className="w-12 h-12" />
+            <h1 className="text-3xl font-bold">
+              Thai<span className="text-yellow-400">seva</span>
+            </h1>
+          </div>
+          <p className="text-lg mt-4">
+            <i className="bi bi-envelope-at-fill"></i> taiseva@gmail.com
+          </p>
+          <p className="text-lg mt-2">
+            <i className="bi bi-phone-fill"></i> +66 7209169866
+          </p>
         </div>
-    </>
-}
 
-export default Footer
+        {/* Company Links */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-6">Company</h2>
+          <ul className="space-y-4 text-lg text-gray-300">
+            <li className="hover:text-yellow-400 cursor-pointer">About</li>
+            <li className="hover:text-yellow-400 cursor-pointer">Contact</li>
+            <li className="hover:text-yellow-400 cursor-pointer">Services</li>
+          </ul>
+        </div>
+
+        {/* Contact Links */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-6">Support</h2>
+          <ul className="space-y-4 text-lg text-gray-300">
+            <li className="hover:text-yellow-400 cursor-pointer">FAQs</li>
+            <li className="hover:text-yellow-400 cursor-pointer">Help</li>
+            <li className="hover:text-yellow-400 cursor-pointer">Terms & Conditions</li>
+          </ul>
+        </div>
+
+        {/* Social & Store Buttons */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-6">Connect with us</h2>
+          <div className="flex space-x-4 mb-6">
+            <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 hover:scale-110 transition" />
+            <img src={facebook} alt="Facebook" className="w-6 h-6 hover:scale-110 transition" />
+            <img src={instagram} alt="Instagram" className="w-6 h-6 hover:scale-110 transition" />
+            <img src={twitter} alt="Twitter" className="w-6 h-6 hover:scale-110 transition" />
+          </div>
+          <p className="text-lg font-semibold mb-3">Download Our App</p>
+          <div className="space-y-3">
+            <button>
+              <img src={AppStore} alt="App Store" className="w-32 hover:opacity-80 transition" />
+            </button>
+            <button>
+              <img src={googlePay} alt="Google Play" className="w-32 hover:opacity-80 transition" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center text-gray-500 py-6 border-t border-gray-700 text-sm sm:text-base">
+        © 2024 Thaiseva. All Rights Reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -8,37 +8,34 @@ import Footer from "../../components/Footer";
 
 const About = () => {
   return (
-    <>
-      <div className="aboutImg">
-        <div className="bg-slate-950 h-[30rem] bg-opacity-80 text-white text-center">
-          <Navbar />
-          <div className="py-[8.5rem] px-10">
-            <div className="flex justify-center gap-2">
-              <p className="text-5xl font-semibold">
-                <span className="text-yellow-500">ABOUT</span> US
-              </p>
-              <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-            </div>
-            <div className="flex justify-center my-8">
-              <i className="lg:w-2/4 md:w-2/3 text-lg">
-                Improving your small business's growth through THAISEVA app. It
-                also helps to improve your customer service.
-              </i>
-            </div>
-            <div className="space-x-6 text-lg font-semibold">
-              <Link to="/" className="text-yellow-500">
-                Home
-              </Link>
-              <span>About</span>
-            </div>
+    <div className="aboutImg min-h-screen w-full">
+      <div className="bg-slate-950 bg-opacity-90 text-white">
+        <Navbar />
+        <div className="flex flex-col items-center justify-center text-center py-32 px-6 md:px-12 lg:px-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-yellow-500">ABOUT</span> US
+          </h1>
+
+          <div className="h-2 w-12 rounded-full bg-yellow-500 mb-6"></div>
+
+          <p className="max-w-2xl text-base md:text-lg italic mb-8">
+            Improving your small business's growth through the THAISEVA app. It also helps improve your customer service.
+          </p>
+
+          <div className="space-x-4 text-base md:text-lg font-semibold">
+            <Link to="/" className="text-yellow-500 hover:underline">
+              Home
+            </Link>
+            <span className="text-white">/ About</span>
           </div>
         </div>
-        <AboutApp />
-        <Mission />
-        <Team />
-        <Footer />
       </div>
-    </>
+
+      <AboutApp />
+      <Mission />
+      <Team />
+      <Footer />
+    </div>
   );
 };
 

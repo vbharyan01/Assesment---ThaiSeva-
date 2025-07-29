@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "thaiseva-website-40425"
-  }
+    "default": "thaiseva-website-40425",
+    "app": "thaiseva-85cda"
+  },
+  "targets": {},
+  "etags": {}
 }
