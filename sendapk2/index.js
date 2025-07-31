@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
+app.use(cors())
 const corsHandler = cors({ origin: true }); 
 
 app.use(express.json());
@@ -12,11 +13,15 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'aryan2004ahuja@gmail.com',
-    pass: 'iwlwlrhpybwpxgwt'
+    pass: 'iwlw lrhp ybwp xgwt'
   }
 });
 
-app.post('/', (req, res) => {
+app.get("/", (req, res) => {
+  res.send("Hello This is going good")
+})
+
+app.post('/api', (req, res) => {
   const { name, email } = req.body;
   console.log("Received POST request with:", req.body); 
 
@@ -29,7 +34,7 @@ app.post('/', (req, res) => {
     from: 'aryan2004ahuja@gmail.com',
     to: email,
     subject: 'Your APK Download Link',
-    text: `Hi ${name},\n\nHere is your APK download link: https://drive.google.com/uc?export=download&id=1uWcPZLYKgcylzh5TduSxhIyuEcfobKYH\n\nThank you for trying our app!`
+    text: `Hi ${name},\n\nHere is your APK download link: https://appdistribution.firebase.dev/i/c51dc7b8d8c6a5e7\n\nThank you for trying our app!`
   };
 
   console.log("Attempting to send email to:", email); 

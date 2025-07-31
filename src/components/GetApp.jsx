@@ -9,7 +9,8 @@ const GetApp = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://us-central1-thaiseva-85cda.cloudfunctions.net/sendApkLink", {
+      // https://us-central1-thaiseva-85cda.cloudfunctions.net/sendApkLink
+      const res = await fetch("https://sendapklink-3qrisnmvhq-uc.a.run.app/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
